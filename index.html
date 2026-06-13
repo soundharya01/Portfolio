@@ -1,950 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soundharya Moorthi — Cloud & DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Riya - Personal Portfolio Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+  <!-- ─── NAV ─── -->
+  <header class="nav" id="nav">
+    <div class="nav-wrap">
+      <a href="#top" class="nav-logo">SM<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#about"      class="nl">About</a>
+        <a href="#experience" class="nl">Experience</a>
+        <a href="#skills"     class="nl">Skills</a>
+        <a href="#research"   class="nl">Research</a>
+        <a href="#contact"    class="nl nl-cta">Hire Me</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-drawer" id="drawer">
+      <a href="#about"      class="dl">About</a>
+      <a href="#experience" class="dl">Experience</a>
+      <a href="#skills"     class="dl">Skills</a>
+      <a href="#research"   class="dl">Research</a>
+      <a href="#contact"    class="dl">Hire Me</a>
+    </div>
+  </header>
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- ─── HERO ─── -->
+  <section id="top" class="hero">
+    <!-- decorative dots grid -->
+    <div class="hero-dots" aria-hidden="true"></div>
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <div class="hero-wrap">
+      <div class="hero-left">
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for new roles
+        </div>
 
+        <h1 class="hero-h1">
+          I build cloud<br>
+          infrastructure<br>
+          <span class="hero-accent">that ships.</span>
+        </h1>
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <p class="hero-sub">
+          Cloud &amp; DevOps Engineer with production experience across large-scale AWS migrations, Agentic AI platforms on EKS, and GitOps delivery pipelines. Based in Bangkok.
+        </p>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+        <div class="hero-chips">
+          <span class="chip">AWS</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Terraform</span>
+          <span class="chip">GitOps</span>
+          <span class="chip">CI/CD</span>
+        </div>
 
-    <body>
+        <div class="hero-actions">
+          <a href="mailto:soundharyamoorthi03@gmail.com" class="btn-solid">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Get in Touch
+          </a>
+          <a href="#experience" class="btn-ghost">View Work ↓</a>
+        </div>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        <div class="hero-meta">
+          <a href="mailto:soundharyamoorthi03@gmail.com" class="hmeta">soundharyamoorthi03@gmail.com</a>
+          <span class="hmeta-sep">·</span>
+          <a href="https://linkedin.com/in/soundharya-moorthi-296391229/" target="_blank" class="hmeta">LinkedIn</a>
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+
+        <!-- stat card -->
+        <div class="stat-card" id="statCard">
+          <div class="sc-header">
+            <div class="sc-avatar">
+              <img src="images/profile.jpg" alt="Soundharya Moorthi" class="sc-photo"
+                   onerror="this.style.display='none';document.querySelector('.sc-initials').style.display='flex'" />
+              <div class="sc-initials">SM</div>
             </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-section border-0">
-            <nav class="navbar navbar-light">
-                <div class="navbar-nav flex-column">
-                    <a href="#pigraHome" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
-                    <a href="#pigraAbout" class="nav-item nav-link"><span class="far fa-address-card"></span> About</a>
-                    <a href="#pigraService" class="nav-item nav-link"><span class="fab fa-servicestack"></span>Education</a>
-                    <a href="#pigraBlog" class="nav-item nav-link"><span class="fa fa-blog"></span>  Skills & Projects</a>
-                    <a href="#pigraContact" class="nav-item nav-link"><span class="fas fa-address-book"></span> Contact</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid" id="pigraHome">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-12 col-lg-3">
-                        <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
-                            <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
-                                <h1 class="display-6 text-white mb-0">Riya</h1>
-                            </a>
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.3s">
-                                <h1 class="display-6 text-white mb-0">🚀 DevOps Engineer & Cloud Enthusiast</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-9">
-                        <div class="header-img d-flex h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-5">
-                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
-                                        <img src="img/Profile.jpeg" class="img-fluid w-100" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Image">
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h1 class="display-6 mb-4">Cloud & DevOps Engineer</h1>
-                                    <p class="mb-4">Driving efficiency and scalability with Kubernetes, Docker, AWS, and CI/CD. Passionate about cloud automation, 
-sustainable infrastructure, and innovative solutions.
-                                    </p>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                        <p class="text-dark mb-0">Karur, TamilNadu.</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fas fa-envelope text-primary me-3"></i>
-                                        <p class="text-dark mb-0">soundaryamoorthi03@gmail.com</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fa fa-phone-alt text-primary me-3"></i>
-                                        <p class="text-dark mb-0">(+91) 8838963211</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-4">
-                                        <i class="fab fa-firefox-browser text-primary me-3"></i>
-                                        <p class="text-dark mb-0">https://soundharya01.github.io/Portfolio/</p>
-                                    </div>
-                                    <div class="d-flex">
-                                   <!--      <a class="btn btn-primary btn-sm-square me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a> -->
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/riya_m_003/" target="_blank"><i class="fab fa-instagram text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <p class="sc-name">Soundharya Moorthi</p>
+              <p class="sc-role">Cloud &amp; Platform Engineer · AVASOFT</p>
             </div>
-        </div>
-        <!-- Header End -->
+          </div>
 
-
-        <!-- About Start -->
-        <div class="container-fluid" id="pigraAbout">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-12 col-lg-3">
-                        <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">About Me</p>
-                                <h1 class="display-6 text-white mb-0"></h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-9">
-                        <div class="about-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-5">
-                                <div class="col-xl-5">
-                                    <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <img src="img/aboutme.jpg" class="img-fluid w-100" alt="Image">
-                                        <div class="sosial-icon">
-                                         <!--     <a class="btn btn-primary btn-sm-square mb-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>  -->
-                                            <a class="btn btn-primary btn-sm-square mb-3" href="https://www.instagram.com/riya_m_003/" target="_blank"><i class="fab fa-instagram text-white"></i></a>
-                                            <a class="btn btn-primary btn-sm-square mb-0" href="www.linkedin.com/in/soundharya-moorthi-296391229" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h4 class="mb-4">Hello, I'm Soundharya Moorthi</h4>
-                                    <p class="mb-4">I’m passionate about cloud technology and DevOps practices, with hands-on experience in Linux, AWS, Docker, Kubernetes, and CI/CD pipelines. 
-                                        I received comprehensive training at Besant Technologies, Chennai, which strengthened my skills in deploying and managing containerized applications on the cloud. 
-                                        I enjoy every step of solving challenges and building efficient, scalable solutions.
-                                    </p>
-                                    
-                                    </div>
-                                    <a href="https://drive.google.com/file/d/1x-1ny9_fD7ZLY5kmzlgffNfrsLR7xHio/view?usp=sharing" class="btn btn-primary py-2 px-4"> <i class="fas fa-download me-2"></i>Download My CV</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="sc-stats">
+            <div class="sc-stat">
+              <span class="ss-n">200<sup>+</sup></span>
+              <span class="ss-l">Servers migrated to AWS</span>
             </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Education Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="education-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Education</p>
-                                <h1 class="display-6 text-white mb-0">My Education Qualification</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="education-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Chulalongkorn University, Bangkok.</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> 2023 - 2025
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">M.E. Electrical Engineering</h4>
-                                        <p class="mb-0">Specializing in cloud computing, Docker, and Kubernetes for resource management. 
-                                            Focused on energy-aware scheduling in Kubernetes clusters.
-                                            Research work: Investigating energy-efficient workload distribution in multi-layer edge-cloud architectures.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">PGP College of Arts and Science, Tamil Nadu.</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> 2019 - 2022
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">B.Sc., Computer Science</h4>
-                                        <p class="mb-0">Self-taught HTML, CSS, JavaScript, React for web development, and React Native for mobile app development through personal projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="sc-stat">
+              <span class="ss-n">100<sup>+</sup></span>
+              <span class="ss-l">Client envs provisioned</span>
             </div>
-        </div>
-        <!-- Education End -->
-
-        <!-- Experience Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Experience</p>
-                                <h1 class="display-6 text-white mb-0">Training/ Certification</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="experience-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Besant Technologies</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> 2025 - present
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">Aws & Devops Trainee</h4>
-                                        <p class="mb-0">During my AWS & DevOps trainee, I worked on deploying and managing cloud-based applications using AWS services, Linux, Docker, and Kubernetes. 
-                                            I gained practical experience in building CI/CD pipelines, automating deployments, and monitoring system performance with modern DevOps tools. 
-                                            This role helped me strengthen my skills in cloud infrastructure, containerization, and automation while learning industry best practices for scalable and efficient solutions.
-                                        </p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="sc-stat">
+              <span class="ss-n">0</span>
+              <span class="ss-l">Production disruptions</span>
             </div>
+          </div>
+
+          <div class="sc-tags">
+            <span class="sct teal">EKS</span>
+            <span class="sct teal">Bedrock</span>
+            <span class="sct blue">Terraform</span>
+            <span class="sct blue">Argo CD</span>
+            <span class="sct purple">Kargo</span>
+            <span class="sct purple">Jenkins</span>
+          </div>
         </div>
-        <!-- Exparience End -->
 
-
-        <!-- Skills Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Skills</p>
-                                <h1 class="display-6 text-white mb-0">Technical Expertise</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="skills-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-linux fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> --> 
-                                        </div>
-                                        <p class="mb-0">Linux</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-primary text-center mb-3"><img src="img/git.png" class="k8s-icon" alt="git" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> --> 
-                                        </div>
-                                        <p class="mb-0">Git</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-docker fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> --> 
-                                        </div>
-                                        <p class="mb-0">Docker</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/icons8-kubernetes-50.png" class="k8s-icon" alt="Kubernetes" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--  <h4 class="display-6" data-toggle="counter-up">95</h4>
-                                            <h4 class="display-6">%</h4> --> 
-                                        </div>
-                                        <p class="mb-0">Kubernetes</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-aws fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                           <!-- <h4 class="display-6" data-toggle="counter-up">87</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">AWS Services</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.7s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-jenkins fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">75</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Jenkins</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-primary text-center mb-3"><img src="img/icons8-ansible-48.png" alt="Ansible" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                          <!--   <h4 class="display-6" data-toggle="counter-up">67</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Ansible</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/icons8-terraform-50.png" alt="Terraform" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Terraform</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/icons8-grafana-48.png" alt="Grafana" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Grafana</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/icons8-prometheus-48.png" alt="Prometheus" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Prometheus</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/helm.png" alt="Terraform" style="height:48px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Helm</p>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><img src="img/argo.png" alt="Agro" style="height:50px;"></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                         <!--    <h4 class="display-6" data-toggle="counter-up">98</h4>
-                                            <h4 class="display-6">%</h4> -->
-                                        </div>
-                                        <p class="mb-0">Agro CD</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- terminal -->
+        <div class="term">
+          <div class="term-bar">
+            <div class="term-dots">
+              <span class="td r"></span><span class="td y"></span><span class="td g"></span>
             </div>
+            <span class="term-title">bash — soundharya@eks-cluster</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="tp">❯</span> terraform plan</div>
+            <div class="term-line to">Plan: <span class="tg">12 to add</span>, 0 to change, 0 to destroy.</div>
+            <div class="term-line"><span class="tp">❯</span> terraform apply --auto-approve</div>
+            <div class="term-line to tg">Apply complete! Resources: 12 added.</div>
+            <div class="term-line">&nbsp;</div>
+            <div class="term-line"><span class="tp">❯</span> kubectl get pods -n production</div>
+            <div class="term-line to">NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS&nbsp;&nbsp;&nbsp;READY</div>
+            <div class="term-line to tg">agent-core-7d4f9b&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;3/3</div>
+            <div class="term-line to tg">bedrock-proxy-5c8k&nbsp;&nbsp;Running&nbsp;&nbsp;2/2</div>
+            <div class="term-line"><span class="tp">❯</span><span class="tc">▌</span></div>
+          </div>
         </div>
-        <!-- Skills End -->
 
+      </div>
+    </div>
+  </section>
 
-        <!-- Service Start 
-        <div class="container-fluid" id="pigraService">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">My Services</p>
-                                <h1 class="display-6 text-white mb-0">What I do for you</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="service-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-bezier-curve fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Creative Design</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam repudiandae
-                                                </p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
-                                                <p><i class="fa fa-check me-2"></i> Research</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-laptop-code fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Web Developm</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam repudiandae
-                                                </p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
-                                                <p><i class="fa fa-check me-2"></i> Research</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fab fa-app-store fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Mobile Application</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam repudiandae
-                                                </p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
-                                                <p><i class="fa fa-check me-2"></i> Research</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Mobile App</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="section-eyebrow">About</div>
+      <div class="about-layout">
+        <div class="about-text">
+          <h2 class="sh2">Cloud engineer who<br>ships, not just designs.</h2>
+          <p>I'm a Cloud &amp; DevOps Engineer with end-to-end experience — from the first Terraform plan to production traffic on EKS. I've migrated over 200 servers across a full Azure-to-AWS move, built Agentic AI platforms from scratch, and implemented GitOps workflows that removed human error from deployments.</p>
+          <p>My academic background in energy-aware Kubernetes scheduling at Chulalongkorn University isn't just research for me — it informs how I think about resource efficiency and cost in every infrastructure decision I make.</p>
+          <p>I'm fluent in the full cloud stack: infrastructure automation, container orchestration, CI/CD, security governance, and observability. I read architecture diagrams the way others read books.</p>
+          <a href="mailto:soundharyamoorthi03@gmail.com" class="btn-solid" style="margin-top:0.5rem;width:fit-content">Let's talk →</a>
+        </div>
+        <div class="about-sidebar">
+          <div class="info-card">
+            <div class="ic-row">
+              <div class="ic-icon teal-bg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="ic-label">Location</p>
+                <p class="ic-val">Bangkok, Thailand</p>
+              </div>
             </div>
-        </div>
-         Service End -->
-
-
-        <!-- Portfolio Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Portfolio</p>
-                                <h1 class="display-6 text-white mb-0">Projects & Publications</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Research Paper</h4>
-                                        <h4 class="display-6 mb-0 small-title">
-  <a href="https://ieeexplore.ieee.org/document/11101082" target="_blank" style="color: black; text-decoration: none;">
-    Enhancing Energy Efficiency in Kubernetes Cluster Through Resource and Energy Aware Scheduling
-  </a>
-</h4>
-
-                                    </div>
-                                    <div class="col-9 col-xl-4">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/paper.png" class="img-fluid" alt="Image">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-xl-2">
-                                        <div class="view-img">
-                                            <a href="img/paper.png" class="btn btn-primary btn-lg-square"  data-lightbox="Portfolio-1"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Project</h4>
-                                        <h4 class="display-6 mb-0 small-title">
-  <a href="https://github.com/soundharya01?tab=repositories" target="_blank" style="color: black; text-decoration: none;">
-    Kubernetes Monitoring and Logging
-  </a>
-</h4>
-                                    </div>
-                                    <div class="col-9 col-xl-4">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/proj2.jpg" class="img-fluid" alt="Image">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-xl-2">
-                                        <div class="view-img">
-                                            <a href="img/proj2.jpg" class="btn btn-primary btn-lg-square"  data-lightbox="portfolio-2"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item py-5 wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Project</h4>
-                                        <h1 class="display-6 mb-0 small-title"> <a href="https://github.com/soundharya01?tab=repositories" target="_blank" style="color: black; text-decoration: none;">Deploy a Microservices Application with CI/CD </a> </h1>
-                                    </div>
-                                    <div class="col-9 col-xl-4">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/cicd.png" class="img-fluid" alt="Image">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 col-xl-2">
-                                        <div class="view-img">
-                                            <a href="img/cicd.png" class="btn btn-primary btn-lg-square"  data-lightbox="portfolio-3"><i class="fas fa-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="ic-row">
+              <div class="ic-icon blue-bg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              </div>
+              <div>
+                <p class="ic-label">Current</p>
+                <p class="ic-val">AVASOFT · 2025–Present</p>
+              </div>
             </div>
-        </div>
-        <!-- Portfolio End -->
-
-
-        <!-- Blog Start 
-        <div class="container-fluid" id="pigraBlog">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="blog-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Blog</p>
-                                <h1 class="display-6 text-white mb-0">Recent Posts</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="blog-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-xl-6">
-                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="row g-4">
-                                            <div class="col-4">
-                                                <div class="blog-item-img bg-dark h-100">
-                                                    <a href="#">
-                                                        <img src="img/blog-1.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="h-100">
-                                                
-                                                    <a href="https://youtu.be/RcsQWqwDwSQ?si=BI1ewEsH71BcHeXI" class="d-inline-block h4 mb-4">Oracle VM VirtualBox - Ubuntu OS Installation & Explain</a>
-                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
-                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Soundharya</a></p>
-                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Media</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="row g-4">
-                                            <div class="col-4">
-                                                <div class="blog-item-img bg-dark h-100">
-                                                    <a href="#">
-                                                        <img src="img/blog-2.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="h-100">
-                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 18, 2024</p>
-                                                    <a href="#" class="d-inline-block h4 mb-4">How to Create Quality Figma Design</a>
-                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
-                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Walker</a></p>
-                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Media</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="row g-4">
-                                            <div class="col-4">
-                                                <div class="blog-item-img bg-dark h-100">
-                                                    <a href="#">
-                                                        <img src="img/blog-3.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="h-100">
-                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 23, 2025</p>
-                                                    <a href="#" class="d-inline-block h4 mb-4">Tutorials for Learning Development</a>
-                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
-                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Jacob</a></p>
-                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Lifestyle</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.7s">
-                                        <div class="row g-4">
-                                            <div class="col-4">
-                                                <div class="blog-item-img bg-dark h-100">
-                                                    <a href="#">
-                                                        <img src="img/blog-4.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="h-100">
-                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> November 26, 2025</p>
-                                                    <a href="#" class="d-inline-block h4 mb-4">Tutorials for Learning Development</a>
-                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
-                                                        <p class="mb-0 text-body">By <a href="#" class="h6">Perkel</a></p>
-                                                        <p class="mb-0 text-body">In <a href="#" class="h6">Design</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 wow fadeInUp" data-wow-delay="0.9s">
-                                    <div class="blog-btn d-flex justify-content-center">
-                                        <p class="mb-0 me-2">For More Works Visit</p>
-                                        <a href="#" class="btn d-inline-block p-0">Our Blog</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="ic-row">
+              <div class="ic-icon purple-bg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <p class="ic-label">Degree</p>
+                <p class="ic-val">M.E. EE · Chulalongkorn Univ.</p>
+              </div>
             </div>
-        </div>
-        Blog End -->
-
-
-        <!-- Testimonial Start 
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="testimonial-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Testimonial</p>
-                                <h1 class="display-6 text-white mb-0">What People Say</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="testimonial-content h-100 pt-6 ps-6 pb-6">
-                            <div class="testimonial-carousel owl-carousel bg-light wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-1.jpg' alt=''>">
-                                    <div class="row gy-4 gx-2 mb-4">
-                                        <div class="col-sm-6">
-                                            <div class="d-flex justify-content-sm-end">
-                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                    <img src="img/testimonial-img-1.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div>
-                                                <h5 class="mb-2">John Abraham</h5>
-                                                <p class="mb-0">New York, USA</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-sm-center">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                        </p>
-                                        <div class="d-flex justify-content-sm-center">
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-2.jpg' alt=''>">
-                                    <div class="row gy-4 gx-2 mb-4">
-                                        <div class="col-sm-6">
-                                            <div class="d-flex justify-content-sm-end">
-                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                    <img src="img/testimonial-img-2.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div>
-                                                <h5 class="mb-2">John Abraham</h5>
-                                                <p class="mb-0">New York, USA</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-sm-center">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                        </p>
-                                        <div class="d-flex justify-content-sm-center">
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/testimonial-img-3.jpg' alt=''>">
-                                    <div class="row gy-4 gx-2 mb-4">
-                                        <div class="col-sm-6">
-                                            <div class="d-flex justify-content-sm-end">
-                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
-                                                    <img src="img/testimonial-img-3.jpg" class="img-fluid" style="object-fit: cover;" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div>
-                                                <h5 class="mb-2">John Abraham</h5>
-                                                <p class="mb-0">New York, USA</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-sm-center">
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nemo facilis tempora esse explicabo sed! Dignissimos quia ullam pariatur blanditiis sed voluptatum. Totam aut quidem laudantium tempora. Minima, saepe earum!
-                                        </p>
-                                        <div class="d-flex justify-content-sm-center">
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                            <i class="fas fa-star text-primary"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="ic-row">
+              <div class="ic-icon amber-bg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <p class="ic-label">Email</p>
+                <a href="mailto:soundharyamoorthi03@gmail.com" class="ic-link">soundharyamoorthi03<br>@gmail.com</a>
+              </div>
             </div>
-        </div>
-        Testimonial End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-fluid" id="pigraContact">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Contact Me</p>
-                                <h1 class="display-6 text-white mb-0">Feel free to reach out to me for project discussions, or opportunities.</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                       <div class="contact-content h-100 pt-6 ps-6 pb-6">
-                            <div class="bg-light p-4">
-                                <div class="row g-5">
-                                    <div class="col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fas fa-map-marker-alt fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <h4>Address</h4>
-                                                <p class="mb-0">Karur, TamilNadu.</p>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fas fa-envelope fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <h4>Mail</h4>
-                                                <p class="mb-0">soundharyamoorthi03@gmail.com</p>
-                                            </div>
-                                        </div> -->
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fa fa-phone-alt fa-2x"></i>
-                                            </div>
-                                            <div>
-                                                <h4>Telephone</h4>
-                                                <p class="mb-0">(+91) 8838963211</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div>
-                                            <form>
-                                                <div class="row g-3">
-                                                    <div class="col-lg-12 col-xl-6">
-                                                        <div class="form-floating">
-                                                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
-                                                            <label for="name">Your Name</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-xl-6">
-                                                        <div class="form-floating">
-                                                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
-                                                            <label for="email">Your Email</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-floating">
-                                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
-                                                            <label for="subject">Subject</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="form-floating">
-                                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
-                                                            <label for="message">Message</label>
-                                                        </div>
-                
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <button class="btn btn-primary w-100 py-3">Send Message</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                </div>
+            <div class="ic-row">
+              <div class="ic-icon red-bg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <p class="ic-label">LinkedIn</p>
+                <a href="https://linkedin.com/in/soundharya-moorthi-296391229/" target="_blank" class="ic-link">soundharya-moorthi</a>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Contact End -->
+      </div>
+    </div>
+  </section>
 
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" class="section section-tinted">
+    <div class="wrap">
+      <div class="section-eyebrow">Experience</div>
+      <h2 class="sh2">What I've shipped</h2>
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer bg-dark border-bottom-0">
-            <div class="container wow fadeIn" data-wow-delay="0.1s">
-                <div class="row g-0">
-                    <div class="col-12">
-                       <div class="footer-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-12 text-center">
-                                    <div class="d-flex justify-content-center">
-                                       <!--  <a class="btn btn-light btn-md-square me-3" href=""><i class="fab fa-facebook-f"></i></a> -->
-                                        <a class="btn btn-light btn-md-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-light btn-md-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                                <!-- 
-                                <div class="col-12 text-center">
-                                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-body me-2"></i>riya</a>, All right reserved.</span>
-                                </div>
-                                -->
+      <div class="exp-wrap">
 
-                                <div class="col-12 text-center text-body">
-                                    <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                                    <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                                    <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                                    Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                                </div>
-                            </div>
-                       </div>        
-                    </div>
-                </div>
+        <!-- company strip -->
+        <div class="exp-co">
+          <div class="exp-co-dot"></div>
+          <div class="exp-co-info">
+            <h3 class="exp-co-name">AVASOFT</h3>
+            <span class="exp-co-role">Cloud &amp; Platform Engineer</span>
+            <span class="exp-co-date">2025 – Present</span>
+          </div>
+        </div>
+
+        <!-- project 1 -->
+        <div class="exp-card" id="exp1">
+          <div class="exp-card-top">
+            <div>
+              <div class="exp-labels">
+                <span class="elabel teal">Agentic AI</span>
+                <span class="elabel teal">AWS EKS</span>
+                <span class="elabel teal">Bedrock</span>
+              </div>
+              <h3 class="exp-title">GoAnywhere &amp; Globalscape<br><span>Agentic AI Platform on AWS</span></h3>
             </div>
+            <div class="exp-nums">
+              <div class="en"><span class="en-v">EKS</span><span class="en-l">Orchestration</span></div>
+              <div class="en"><span class="en-v">IaC</span><span class="en-l">CloudFormation</span></div>
+              <div class="en"><span class="en-v">GitOps</span><span class="en-l">Kargo</span></div>
+            </div>
+          </div>
+          <p class="exp-desc">Designed and deployed the full cloud-native infrastructure stack to support Agentic AI workloads — from the networking layer to Bedrock AgentCore Runtime, Memory, and Guardrails running on EKS.</p>
+          <ul class="exp-ul">
+            <li>Designed and deployed cloud-native infrastructure for Agentic AI workloads using EKS, Bedrock, AgentCore Runtime &amp; Memory, Guardrails, S3, ECR, PostgreSQL, and Redis.</li>
+            <li>Automated environment provisioning using CloudFormation and Golden Path manifests, eliminating manual setup and enforcing consistency across Dev, Stage, and Prod.</li>
+            <li>Built and maintained Jenkins CI/CD pipelines covering build, test, Docker image build, ECR push, and Kubernetes rollout stages.</li>
+            <li>Implemented GitOps Continuous Delivery with Kargo — automated image promotions with approval gates, fully traceable across environments.</li>
+          </ul>
+          <div class="exp-pills">
+            <span class="ep">AWS EKS</span><span class="ep">Bedrock</span><span class="ep">AgentCore</span>
+            <span class="ep">CloudFormation</span><span class="ep">Jenkins</span><span class="ep">Kargo</span>
+            <span class="ep">S3</span><span class="ep">ECR</span><span class="ep">PostgreSQL</span><span class="ep">Redis</span>
+          </div>
         </div>
-        <!-- Footer End -->
 
+        <!-- project 2 -->
+        <div class="exp-card" id="exp2">
+          <div class="exp-card-top">
+            <div>
+              <div class="exp-labels">
+                <span class="elabel blue">Cloud Migration</span>
+                <span class="elabel blue">Azure → AWS</span>
+              </div>
+              <h3 class="exp-title">Fortra<br><span>Azure-to-AWS Large-Scale Migration</span></h3>
+            </div>
+            <div class="exp-nums">
+              <div class="en"><span class="en-v">200<sup>+</sup></span><span class="en-l">Servers</span></div>
+              <div class="en"><span class="en-v">100<sup>+</sup></span><span class="en-l">Accounts</span></div>
+              <div class="en"><span class="en-v">0</span><span class="en-l">Disruptions</span></div>
+            </div>
+          </div>
+          <p class="exp-desc">End-to-end migration of Fortra's entire Azure estate — 200+ servers and 100+ Azure accounts — into a governed multi-account AWS Landing Zone with zero downtime.</p>
+          <ul class="exp-ul">
+            <li>Migrated 200+ servers and 100+ Azure accounts to AWS, ensuring secure onboarding, governance compliance, and minimal business disruption.</li>
+            <li>Provisioned all AWS infrastructure using Terraform across 100+ client environments, building reusable modules for repeatable deployments.</li>
+            <li>Automated application deployments via CI/CD and GitOps using Jenkins, GitLab CI/CD, Docker, and Argo CD.</li>
+            <li>Implemented cloud security and governance using AWS Control Tower, Security Hub, Inspector, WAF, and IAM least-privilege policies across all migrated accounts.</li>
+          </ul>
+          <div class="exp-pills">
+            <span class="ep">Terraform</span><span class="ep">Control Tower</span><span class="ep">Argo CD</span>
+            <span class="ep">Jenkins</span><span class="ep">GitLab CI/CD</span><span class="ep">Docker</span>
+            <span class="ep">Security Hub</span><span class="ep">Inspector</span><span class="ep">WAF</span><span class="ep">DataSync</span>
+          </div>
+        </div>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+      </div>
+    </div>
+  </section>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-eyebrow">Skills</div>
+      <h2 class="sh2">Full-stack cloud toolchain</h2>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+      <div class="skills-layout">
 
+        <div class="skill-block">
+          <div class="sb-head">
+            <div class="sb-icon teal-bg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+            </div>
+            <span class="sb-title">Cloud Platforms &amp; IaC</span>
+          </div>
+          <div class="sb-pills">
+            <span class="sp">AWS Control Tower</span><span class="sp">AFT</span><span class="sp">IAM</span>
+            <span class="sp">VPC</span><span class="sp">EC2</span><span class="sp">EKS</span>
+            <span class="sp">S3</span><span class="sp">RDS PostgreSQL</span><span class="sp">ECR</span>
+            <span class="sp">WAF</span><span class="sp">CloudWatch</span><span class="sp">Security Hub</span>
+            <span class="sp">Inspector</span><span class="sp">DataSync</span><span class="sp">WorkSpaces</span>
+            <span class="sp">Bedrock</span><span class="sp">CloudFormation</span><span class="sp">Terraform</span>
+            <span class="sp">Terragrunt</span><span class="sp">Ansible</span>
+            <span class="sp">Azure Landing Zone</span><span class="sp">Azure Virtual WAN</span><span class="sp">Azure VNet</span>
+          </div>
+        </div>
 
+        <div class="skill-block">
+          <div class="sb-head">
+            <div class="sb-icon blue-bg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10h2l3 4 3-4h2"/></svg>
+            </div>
+            <span class="sb-title">Containers &amp; Orchestration</span>
+          </div>
+          <div class="sb-pills">
+            <span class="sp">Docker</span><span class="sp">Kubernetes</span><span class="sp">Amazon EKS</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="sb-head">
+            <div class="sb-icon purple-bg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+            </div>
+            <span class="sb-title">CI/CD &amp; GitOps</span>
+          </div>
+          <div class="sb-pills">
+            <span class="sp">Jenkins</span><span class="sp">GitLab CI/CD</span><span class="sp">GoCD</span>
+            <span class="sp">Argo CD</span><span class="sp">Kargo</span><span class="sp">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="sb-head">
+            <div class="sb-icon red-bg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="sb-title">Artifact Management &amp; Security</span>
+          </div>
+          <div class="sb-pills">
+            <span class="sp">JFrog Artifactory</span><span class="sp">JFrog Xray</span>
+            <span class="sp">Gitleaks</span><span class="sp">Hadolint</span><span class="sp">Mend</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div class="sb-head">
+            <div class="sb-icon amber-bg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="sb-title">Monitoring &amp; Observability</span>
+          </div>
+          <div class="sb-pills">
+            <span class="sp">Amazon CloudWatch</span><span class="sp">Prometheus</span><span class="sp">Grafana</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EDUCATION ─── -->
+  <section class="section section-tinted">
+    <div class="wrap">
+      <div class="section-eyebrow">Education</div>
+      <h2 class="sh2">Academic background</h2>
+
+      <div class="edu-row">
+        <div class="edu-card">
+          <div class="edu-year">2023 – 2025</div>
+          <div class="edu-body">
+            <p class="edu-uni">Chulalongkorn University</p>
+            <p class="edu-loc">Bangkok, Thailand</p>
+            <p class="edu-deg">M.E. Electrical Engineering</p>
+            <p class="edu-note">Thesis on energy-aware scheduling in Kubernetes clusters across multi-layer edge-cloud architectures — published and accepted in May 2025.</p>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year muted">2019 – 2022</div>
+          <div class="edu-body">
+            <p class="edu-uni">PGP College of Arts and Science</p>
+            <p class="edu-loc">Tamil Nadu, India</p>
+            <p class="edu-deg">B.Sc., Computer Science</p>
+            <p class="edu-note">Core foundation in algorithms, systems programming, networks, and software engineering principles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESEARCH ─── -->
+  <section id="research" class="section">
+    <div class="wrap">
+      <div class="section-eyebrow">Research</div>
+      <h2 class="sh2">Publication</h2>
+
+      <div class="pub-wrap">
+        <div class="pub-label">
+          <span class="pub-status">
+            <span class="ps-dot"></span> Accepted · May 2025
+          </span>
+          <span class="pub-venue">IEEE Conference Paper</span>
+        </div>
+        <h3 class="pub-title">
+          Enhancing Energy Efficiency in Kubernetes Cluster Through Resource and Energy Aware Scheduling
+        </h3>
+        <p class="pub-authors">
+          <strong>Soundharya Moorthi</strong>, Ei Ei Mon, Chaodit Aswakul
+        </p>
+        <p class="pub-abstract">
+          Research on energy-aware scheduling policies for Kubernetes in multi-layer edge-cloud architectures. The work proposes resource and energy-aware algorithms that reduce cluster energy consumption without degrading application performance — directly applicable to cloud cost optimisation and sustainable infrastructure at scale.
+        </p>
+        <div class="pub-tags">
+          <span class="ep">Kubernetes</span>
+          <span class="ep">Energy Efficiency</span>
+          <span class="ep">Edge Computing</span>
+          <span class="ep">Resource Scheduling</span>
+          <span class="ep">Cloud Infrastructure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section section-tinted">
+    <div class="wrap">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="sh2">Ready to build<br>something real?</h2>
+          <p class="contact-p">
+            I'm open to Cloud Engineer, DevOps Engineer, and Platform Engineer roles globally. Drop me a direct email — I keep my inbox clean and respond fast.
+          </p>
+          <a href="mailto:soundharyamoorthi03@gmail.com" class="btn-solid btn-large">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            soundharyamoorthi03@gmail.com
+          </a>
+        </div>
+        <div class="contact-right">
+          <a href="tel:+918838963211" class="clink-card">
+            <div class="clc-icon blue-bg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="clc-body">
+              <p class="clc-label">Phone</p>
+              <p class="clc-val">+91 8838963211</p>
+            </div>
+            <svg class="clc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/soundharya-moorthi-296391229/" target="_blank" class="clink-card">
+            <div class="clc-icon purple-bg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div class="clc-body">
+              <p class="clc-label">LinkedIn</p>
+              <p class="clc-val">linkedin.com/in/soundharya-moorthi</p>
+            </div>
+            <svg class="clc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="https://soundharya01.github.io/Portfolio/" target="_blank" class="clink-card">
+            <div class="clc-icon teal-bg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="clc-body">
+              <p class="clc-label">Portfolio</p>
+              <p class="clc-val">soundharya01.github.io/Portfolio</p>
+            </div>
+            <svg class="clc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <span class="footer-logo">SM<span>.</span></span>
+        <p class="footer-tag">Soundharya Moorthi — Cloud &amp; DevOps Engineer</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2025 Soundharya Moorthi</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile burger
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    document.querySelectorAll('.dl').forEach(l => l.addEventListener('click', () => {
+      burger.classList.remove('open');
+      drawer.classList.remove('open');
+    }));
+
+    // Active nav highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const nls = document.querySelectorAll('.nl');
+    sections.forEach(s => {
+      new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          nls.forEach(l => l.classList.remove('active'));
+          const m = document.querySelector(`.nl[href="#${entries[0].target.id}"]`);
+          if (m) m.classList.add('active');
+        }
+      }, { threshold: 0.25 }).observe(s);
+    });
+
+    // Scroll reveal — runs AFTER paint so elements in viewport on load are caught
+    const REVEAL_TARGETS = '.exp-card, .skill-block, .edu-card, .pub-wrap, .clink-card, .about-text, .about-sidebar';
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+    // Use double rAF: first frame applies .reveal (opacity:0), second frame the observer runs
+    // This guarantees elements already on screen fire the observer immediately
+    requestAnimationFrame(() => {
+      document.querySelectorAll(REVEAL_TARGETS).forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${Math.min(i % 5, 4) * 0.08}s`;
+      });
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+      });
+    });
+  </script>
+</body>
 </html>
